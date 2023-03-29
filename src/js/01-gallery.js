@@ -1,7 +1,6 @@
-// Описаний в документації
+
 import SimpleLightbox from "simplelightbox";
-// Додатковий імпорт стилів
-import "simplelightbox/dist/simple-lightbox.min.css";
+import 'simplelightbox/dist/simple-lightbox.min.css';
 import { galleryItems } from './gallery-items.js';
 // // Change code below this line
 // console.log(galleryItems);
@@ -30,7 +29,7 @@ const galleryMarkup = createGallery(galleryItems);
 galleryList.insertAdjacentHTML('beforeend', galleryMarkup);
 
 //Підпис зображень с затримкою
-const lightboxGallery = new SimpleLightbox(".gallery__item a", {
-  captionsData: "alt",
+const lightboxGallery = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
   captionDelay: 250,
 });
