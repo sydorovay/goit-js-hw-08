@@ -31,15 +31,15 @@ messageInput.value = feedbackFormState.message || '';
 form.addEventListener('submit', event => {
   // Зупинити стандартну поведінку браузера
   event.preventDefault();
-  // Очищистити локальне сховище
-  localStorage.removeItem('feedback-form-state');
-  // Очистити поля форми
-  emailInput.value = '';
-  messageInput.value = '';
   // Вивести у консоль об'єкт з полями email, message та їхніми поточними значеннями
   const feedbackData = {
     email: emailInput.value,
     message: messageInput.value,
   };
   console.log(feedbackData);
+  // Очищистити локальне сховище
+  localStorage.removeItem('feedback-form-state');
+  // Очистити поля форми
+  emailInput.value = '';
+  messageInput.value = '';
 });
