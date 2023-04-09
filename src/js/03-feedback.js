@@ -28,9 +28,11 @@ emailInput.value = feedbackFormState.email || '';
 messageInput.value = feedbackFormState.message || '';
 
 // Обробити подію сабміту форми
-form.addEventListener('submit', event => {
+form.addEventListener('submit', handleSubmit)
+
+function handleSubmit(evt){
   // Зупинити стандартну поведінку браузера
-  event.preventDefault();
+  evt.preventDefault();
   // Вивести у консоль об'єкт з полями email, message та їхніми поточними значеннями
   const feedbackData = {
     email: emailInput.value,
@@ -42,4 +44,4 @@ form.addEventListener('submit', event => {
   // Очистити поля форми
   emailInput.value = '';
   messageInput.value = '';
-});
+};
